@@ -1,10 +1,8 @@
-name: WorkflowEvents
+name: 02 - Workflow Events
 
-on: 
-  schedule:
-    - cron: '38 22 * * *' 
-      timezone: Europe/Lisbon
-  workflow_dispatch:
+on: workflow_dispatch
+
+# To use schedule, I can't use numbers first in the name
 
 jobs:
   echo:
