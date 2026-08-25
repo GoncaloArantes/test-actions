@@ -9,12 +9,11 @@ jobs:
       - name: Say Hello
         run: echo "Hello, World!"
   echo-goodbye:
-    needs: echo-hello
     runs-on: ubuntu-latest
     steps:
       - name: Failed Step
         run: |
-          echo "I will fail"
+          echo "I will succeed"
           exit 0
       - name: Say Goodbye
         run: echo "Goodbye!"
