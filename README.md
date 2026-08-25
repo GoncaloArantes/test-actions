@@ -1,2 +1,1 @@
-# test-actions
-This repository is just to test actions and workflows
+Repository containing examples of GitHub Actions and workflows.
