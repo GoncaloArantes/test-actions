@@ -6,15 +6,27 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      # Checkout the code from the repository
       - name: Checkout code
         uses: actions/checkout@v7
+      - name: Show Folder Structure
+        run: |
+          echo "Folder structure of the repository:"
+          ls
+      - name: Show Tree Directory
+        run: |
+          echo "Tree structure of the repository:"
+          tree
+      # Setup Node.js environment
       - name: Setup Node
         uses: actions/setup-node@v6
         with:
           node-version: '24.x'
+      # Install Dependencies of our React Application
       - name: Install Dependencies
         working-directory: 04-using-actions/react-app
         run: npm ci
+      # Execute Automated Tests
       - name: Run Unit Tests
         working-directory: 04-using-actions/react-app
         run: npm test
