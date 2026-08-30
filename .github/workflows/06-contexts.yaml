@@ -4,7 +4,7 @@ on:
   push:
   workflow_dispatch:
 
-run-name: My custom workflow run name - ${{ runner.os }}
+run-name: My custom workflow run name - ${{ runner.os }} 
 
 jobs:
   echo-data:
@@ -24,4 +24,4 @@ jobs:
           echo "repository variable: $MY_VAR"
         env:
           MY_VAR: ${{ secrets.MY_VAR }}
-          
+
