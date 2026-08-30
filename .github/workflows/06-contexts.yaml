@@ -16,7 +16,7 @@ run-name: 06 - Contexts | DEBUG - ${{ inputs.debug }}
 jobs:
   echo-data:
     env:
-      MY_VAR: ${{ secrets.MY_VAR }}
+      MY_VAR: ${{ vars.MY_VAR }}
       MY_JOB_VAR: "job"
       MY_OVERWRITTEN_VAR: "job"
     runs-on: ubuntu-latest
